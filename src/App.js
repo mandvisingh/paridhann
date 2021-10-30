@@ -9,13 +9,12 @@ import {useState, useEffect} from 'react';
 function App() {
   const [currentUser, setCurrentUser] = useState({});
 
-
-
 useEffect(() => {
   const unsubscribeFromAuth = auth.onAuthStateChanged(user=>{
     setCurrentUser(user)
+    console.log(user)
   })
-  return unsubscribeFromAuth();
+  return function cleanup(){unsubscribeFromAuth();}
 }, [currentUser]);
 
   return (
@@ -23,7 +22,7 @@ useEffect(() => {
       fontfamily: 'Open Sans Condensed',
       margin: '20px'
     }}>
-      <Header/>
+      <Header currentUser={currentUser}/>
       <Switch>
         <Route exact path='/' component={Homepage}></Route>
         <Route path='/shop' component={ShopPage}></Route>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormInput from "../form-input/formInput";
 import CustomButton from '../custom-button/customButton';
 import { signInWithGoogle } from "../../firebase/firebase-util";
+import './styles.scss';
 
 const Signin = () => {
 const [emailaddress, setEmailAddress] = useState('');
@@ -29,8 +30,10 @@ return(
 <form onSubmit={()=>handleSubmit()}>
     <FormInput type="email" name="emailaddress" value={emailaddress} required handleChange={(e)=>handleChange(e)} label="Email"/>
     <FormInput type="password" name="password" value={password} required handleChange={(e)=>handleChange(e)} label="Password"/>
+    <div className='buttons'>
     <CustomButton children='Sign in' type='submit'/>
-    <CustomButton onClick={signInWithGoogle} children='Sign in with Google'/>
+    <CustomButton onClick={signInWithGoogle} isGoogleSignin children='Sign in with Google'/>
+    </div>
 </form>
     </div>
 )
