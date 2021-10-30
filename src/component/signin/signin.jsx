@@ -25,7 +25,9 @@ return(
 <form onSubmit={()=>handleSubmit()}
 >
     <input type="email" name="emailaddress" value={emailaddress} required onChange={(e)=>handleChange(e)}/>
+    <label htmlFor="emailaddress">Email</label>
     <input type="password" name="password" value={password} required onChange={(e)=>handleChange(e)}/>
+    <label htmlFor="password">Password</label>
     <button type='submit'>Sign in</button>
 </form>
     </div>
