@@ -7,7 +7,8 @@ import SignInSignUp from './pages/signin-signup/Signin-signup';
 function App() {
   return (
     <div className="App" style={{
-      'font-family': 'Open Sans Condensed'
+      fontfamily: 'Open Sans Condensed',
+      margin: '20px'
     }}>
       <Header/>
       <Switch>
