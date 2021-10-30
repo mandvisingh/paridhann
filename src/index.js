@@ -6,7 +6,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // strict mode renders the app twice in dev but not in prod
+  <React.StrictMode> 
     <BrowserRouter>
     <App />
     </BrowserRouter>
