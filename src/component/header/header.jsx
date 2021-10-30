@@ -12,10 +12,10 @@ const Header = () => (
                 SHOP
             </Link>
             <Link className="option" to='/'>
-                SIGNOUT
-            </Link>
-            <Link className="option" to='/'>
                 CONTACT
+            </Link>
+            <Link className="option" to='/signin'>
+                SIGN IN
             </Link>
         </div>
     </div>
