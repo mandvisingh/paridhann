@@ -21,7 +21,7 @@ useEffect(() => {
         ...snapshot.data()
       })
     })
-  } else {setCurrentUser(userAuth)}
+  } else {setCurrentUser({id: null})}
     console.log(currentUser)
   })
   return function cleanup(){unsubscribeFromAuth();}
