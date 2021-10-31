@@ -1,8 +1,11 @@
 import Signin from "../../component/signin/signin";
+import SignUp from "../../component/signup/signup";
+import './styles.scss';
 
 const SignInSignUp = () => (
-    <div>
+    <div className="sign-in-up">
     <Signin/>
+    <SignUp/>
     </div>
 )
 

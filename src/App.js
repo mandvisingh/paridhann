@@ -11,7 +11,6 @@ function App() {
 
 useEffect(() => {
   const unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
-    console.log('userAuth', userAuth)
   if(userAuth){
     const userRef = await createUserProfileDocument(userAuth);
 
@@ -22,7 +21,6 @@ useEffect(() => {
       })
     })
   } else {setCurrentUser({id: null})}
-    console.log(currentUser)
   })
   return function cleanup(){unsubscribeFromAuth();}
 }, [currentUser.id]);

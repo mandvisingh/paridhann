@@ -9,7 +9,6 @@ const [emailaddress, setEmailAddress] = useState('');
 const [password, setPassword] = useState('');
 
 const handleSubmit = (event)=>{
-    console.log('i am here')
     event.preventDefault();
         setEmailAddress('')
         setPassword('')
