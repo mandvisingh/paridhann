@@ -36,8 +36,8 @@ return(
     <FormInput type="email" name="emailaddress" value={emailaddress} required handleChange={(e)=>handleChange(e)} label="Email"/>
     <FormInput type="password" name="password" value={password} required handleChange={(e)=>handleChange(e)} label="Password"/>
     <div className='buttons'>
-    <CustomButton children='Sign in' type='submit'/>
-    <CustomButton onClick={signInWithGoogle} isGoogleSignin children='Sign in with Google'/>
+    <CustomButton type='submit'>Sign in </CustomButton>
+    <CustomButton onClick={signInWithGoogle} isGoogleSignin >Sign in with Google</CustomButton>
     </div>
 </form>
     </div>
